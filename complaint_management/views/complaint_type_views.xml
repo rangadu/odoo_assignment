@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="complaint_type_view_form" model="ir.ui.view">
+            <field name="name">complaint.type.form.view</field>
+            <field name="model">complaint.type</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Complaint Type">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="is_question"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="complaint_type_view_tree" model="ir.ui.view">
+            <field name="name">complaint.type.tree.view</field>
+            <field name="model">complaint.type</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Complaint Type">
+                    <field name="name"/>
+                    <field name="is_question"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="complaint_type_action" model="ir.actions.act_window">
+            <field name="name">Complaint Type</field>
+            <field name="res_model">complaint.type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="complaint_type_view_tree"/>
+        </record>
+
+    </data>
+</odoo>

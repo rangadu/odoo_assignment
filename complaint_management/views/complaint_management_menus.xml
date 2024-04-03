@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <menuitem id="complaint_menu_root"
+              name="Complaints"
+              sequence="40"
+              parent="website.menu_website_configuration"/>
+    <menuitem id="complaint_menu_action" name="Complaints" action="complaint_action" parent="complaint_menu_root" sequence="20"/>
+    <menuitem id="complaint_type_menu_action" name="Complaint Types" action="complaint_type_action" parent="complaint_menu_root" sequence="30"/>
+
+
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="complaint_work_order" model="ir.actions.report">
+        <field name="name">Complaint Work Order Report</field>
+        <field name="model">complaint.complaint</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">complaint_management.report_complaint_work_order</field>
+        <field name="report_file">complaint_management.report_complaint_work_order</field>
+        <field name="print_report_name">(object._get_report_base_filename())</field>
+        <field name="paperformat_id" ref="l10n_din5008.paperformat_euro_din_a"/>
+        <field name="binding_model_id" ref="model_complaint_complaint"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>
